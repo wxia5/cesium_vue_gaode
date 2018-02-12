@@ -37,7 +37,7 @@ let Cesium = require('../../node_modules/cesium/Source/Cesium.js');
 		padding: 0;
 	}
 	.el-main{
-		padding: 0;
+		padding: 0!important;
 	}
 	#main{
 		height: 1000px;

@@ -5,6 +5,8 @@ import dataTimePicker from '../components/utilComponent/dateTimePicker'
 import Home from '../components/Home'
 import formComponent from '../components/utilComponent/formComponent'
 import gaodeMap from '../components/gaodeMap'
+import olMap from '../components/olMap'
+import bdMap from '../components/baiduMap'
 import cesiumMap from '../components/cesiumMap'
 Vue.use(Router)
 const routes = [
@@ -13,7 +15,9 @@ const routes = [
 //		{ path: "datePick", component: dataTimePicker, name: "dateTimePicker" },
 		{ path: "", component: Home, name: "home",children:[
 		{ path: "/map3d", component: cesiumMap, name: "map3d" },
-		{ path: "/map2d", component: gaodeMap, name: "map2d" }
+		{ path: "/map2d", component: gaodeMap, name: "map2d" },
+		{ path: "/olMap", component: olMap, name: "ol_map" },
+		{ path: "/bdMap", component: bdMap, name: "bdMap" }
 		]}
 	]
 //}

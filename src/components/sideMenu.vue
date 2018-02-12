@@ -30,11 +30,19 @@
       </el-submenu>
       <el-menu-item :index="path._2d" >
         <i class="el-icon-map"></i>
-        <span slot="title">二维地图</span>
+        <span slot="title">高德地图</span>
+      </el-menu-item>
+    <el-menu-item :index="path.ol_map" >
+        <i class="el-icon-map"></i>
+        <span slot="title">openlayers</span>
       </el-menu-item>
       <el-menu-item :index="path._3d" >
         <i class="el-icon-globe"></i>
-        <span slot="title">三维地图</span>
+        <span slot="title">cesium</span>
+      </el-menu-item>
+            <el-menu-item :index="path.bdMap" >
+        <i class="el-icon-globe"></i>
+        <span slot="title">bdMap</span>
       </el-menu-item>
     </el-menu>
   </el-col>
@@ -47,7 +55,9 @@
   		return{
   			path:{
   				_2d:"/map2d",
-  				_3d:"/map3d"
+  				_3d:"/map3d",
+  				ol_map:'/olMap',
+  				bdMap:"/bdMap"
   			}
   		}
   	},
