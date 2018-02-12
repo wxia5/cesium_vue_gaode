@@ -6,7 +6,7 @@
 	import BMap from 'BMap'
 export default {
     mounted(){
-	var map = new BMap.Map("allmap");    // 创建Map实例
+	var map = new BMap.Map("map");    // 创建Map实例
 	map.centerAndZoom(new BMap.Point(116.404, 39.915), 11);  // 初始化地图,设置中心点坐标和地图级别
 	//添加地图类型控件
 	map.addControl(new BMap.MapTypeControl({
@@ -20,7 +20,7 @@ export default {
 </script>
 
 <style type="text/css">
-	#container{
+	#map{
 		width: 100%;
 		height: 100%;
 	}

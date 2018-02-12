@@ -77,9 +77,9 @@ export default {
 }
 </script>
 
-<style type="text/css">
-	#container{
- width: 400px;
-        height: 250px;
+<style type="text/css" slot>
+	#map{
+ width: 100%;
+        height: 100%;
 	}
 </style>

@@ -7,6 +7,7 @@ import formComponent from '../components/utilComponent/formComponent'
 import gaodeMap from '../components/gaodeMap'
 import olMap from '../components/olMap'
 import bdMap from '../components/baiduMap'
+import leafletMap from '../components/leafletMap'
 import cesiumMap from '../components/cesiumMap'
 Vue.use(Router)
 const routes = [
@@ -17,7 +18,8 @@ const routes = [
 		{ path: "/map3d", component: cesiumMap, name: "map3d" },
 		{ path: "/map2d", component: gaodeMap, name: "map2d" },
 		{ path: "/olMap", component: olMap, name: "ol_map" },
-		{ path: "/bdMap", component: bdMap, name: "bdMap" }
+		{ path: "/bdMap", component: bdMap, name: "bdMap" },
+		{ path: "/leafletMap", component: leafletMap, name: "leafletMap" }
 		]}
 	]
 //}
