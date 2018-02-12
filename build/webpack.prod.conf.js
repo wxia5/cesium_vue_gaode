@@ -11,8 +11,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
 //cesium
-const cesiumSource = 'node_modules/cesium/Source';
-const cesiumWorkers = '../Build/Cesium/Workers';
 
 const env = process.env.NODE_ENV === 'testing'
   ? require('../config/test.env')
@@ -45,13 +43,6 @@ const webpackConfig = merge(baseWebpackConfig, {
     new webpack.DefinePlugin({
       'process.env': env
     }),
-    new CopywebpackPlugin([ { from: path.join(cesiumSource, cesiumWorkers), to: 'Workers' } ]),
-        new CopywebpackPlugin([ { from: path.join(cesiumSource, 'Assets'), to: 'Assets' } ]),
-        new CopywebpackPlugin([ { from: path.join(cesiumSource, 'Widgets'), to: 'Widgets' } ]),
-        new webpack.DefinePlugin({
-            // Define relative base path in cesium for loading assets
-            CESIUM_BASE_URL: JSON.stringify('')
-        }),
     new UglifyJsPlugin({
       uglifyOptions: {
         compress: {

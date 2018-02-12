@@ -6,8 +6,6 @@
 </template>
 
 <script>
-	require('../../node_modules/cesium/Source/Widgets/widgets.css');
-let Cesium = require('../../node_modules/cesium/Source/Cesium.js');
 export default {
   mounted(){
   	var viewer = new Cesium.Viewer("cesiumContainer");

@@ -8,12 +8,10 @@
     	<sideMenu></sideMenu>
     </el-aside>
     <el-main>
-    	<!--<router-view></router-view>-->
-    			
+    	<router-view></router-view>
 		</div>
     </el-main>
   </el-container>
-  <div id="cesiumContainer"></div>
 </el-container>
 </template>
 
@@ -27,13 +25,7 @@ let Cesium = require('../../node_modules/cesium/Source/Cesium.js');
   	components:{
   		headerNav:headerNav,
   		sideMenu:sideMenu
-  	},
-  	  mounted(){
-  	var viewer = new Cesium.Viewer("cesiumContainer");
-  	    viewer.camera.flyTo({
-    destination : Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000.0)
-});
-  }
+  	}
   	}
 </script>
 
