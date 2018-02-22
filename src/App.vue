@@ -1,7 +1,7 @@
 <template>
-	
-<router-view></router-view>
-</div>
+	<transition>
+	<router-view></router-view>
+	</transition>
 </template>
 
 <script>
