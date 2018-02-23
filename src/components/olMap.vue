@@ -39,7 +39,8 @@ export default {
 //  	initDraw(map)
 
         	 var popup = new Overlay({
-        element: document.getElementById('qqq')
+        element: document.getElementById('qqq'),
+        offset:[-91,-250]
       });
        map.addOverlay(popup);
                 map.on('click', function(evt) {
