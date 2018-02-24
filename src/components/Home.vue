@@ -1,45 +1,48 @@
 <template>
-		<el-container>
-  <el-header>
-  	<headerNav></headerNav>
-  </el-header>
-  <el-container id="main">
-    <el-aside width="199px">
-    	<sideMenu></sideMenu>
-    </el-aside>
-    <el-main>
-    	<router-view></router-view>
-		</div>
-    </el-main>
-  </el-container>
-</el-container>
+	<el-container>
+		<el-header>
+			<headerNav></headerNav>
+		</el-header>
+		<el-container id="main">
+			<el-aside width="199px">
+				<sideMenu></sideMenu>
+			</el-aside>
+			<el-main>
+				<router-view></router-view>
+				</div>
+			</el-main>
+		</el-container>
+	</el-container>
 </template>
 
 <script>
 	import headerNav from "./header";
 	import sideMenu from "./sideMenu";
-		require('../../node_modules/cesium/Source/Widgets/widgets.css');
-let Cesium = require('../../node_modules/cesium/Source/Cesium.js');
-	
-	  export default {
-  	components:{
-  		headerNav:headerNav,
-  		sideMenu:sideMenu
-  	}
-  	}
+	require('../../node_modules/cesium/Source/Widgets/widgets.css');
+	let Cesium = require('../../node_modules/cesium/Source/Cesium.js');
+
+	export default {
+		components: {
+			headerNav: headerNav,
+			sideMenu: sideMenu
+		}
+	}
 </script>
 
 <style>
-	body{
+	body {
 		margin: 0;
 	}
-	.el-header{
+	
+	.el-header {
 		padding: 0;
 	}
-	.el-main{
+	
+	.el-main {
 		padding: 0!important;
 	}
-	#main{
+	
+	#main {
 		height: 1000px;
 	}
 </style>
