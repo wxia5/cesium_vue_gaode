@@ -23,6 +23,8 @@ export default {
           attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
         })
       });
+          	    	var height = $("#content").height()
+    		$("#maptalks").height(height)
     }
 }
 </script>

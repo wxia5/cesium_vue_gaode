@@ -1,11 +1,6 @@
 <template>
 <div id="">
-		  <div id="container" class="mymap"></div>
-	  <div id="">
-	  	{{getNumber1}}
-	  <div id="">
-	  		{{getByID(5)}}
-	  </div>
+		  <div id="gaode" class="mymap"></div>
 	  </div>
 </div>
 </template>
@@ -16,11 +11,17 @@
 export default {
     mounted(){
     	this.$store.commit('increment')
+    	    	var height = $("#content").height()
+    		$("#gaode").height(height)
+    		window.onresize = function(){
+	    		var height = $("#content").height()
+    			$("#gaode").height(height)
+    		}
 //  	console.log(getNumber1)
 //  	console.log(getNumber1Length)
 //  	console.log(getByID(5))
 //  	console.log(getByID2(1))
-    const map = new AMap.Map('container', {
+    const map = new AMap.Map('gaode', {
           zoom: 9
         });
     },
@@ -36,7 +37,7 @@ export default {
 </script>
 
 <style type="text/css">
-  body,html,#container{
+  body,html,#gaode{
         height: 100%;
         margin: 0px;
       }
