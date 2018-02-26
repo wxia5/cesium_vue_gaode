@@ -25,6 +25,10 @@
 							<img class="map-icon" src="../../static/img/mapIcon/leaflet.jpg"/>
 							<span slot="title">leaflet</span>
 						</el-menu-item>
+						<el-menu-item :index="path.maptalks">
+							<img class="map-icon" src="../../static/img/mapIcon/leaflet.jpg"/>
+							<span slot="title">maptalks</span>
+						</el-menu-item>
 					</el-menu-item-group>
 					<el-menu-item-group title="三维地图">
 						<el-menu-item :index="path._3d">
@@ -53,7 +57,8 @@
 					_3d: "/map3d",
 					ol_map: '/olMap',
 					bdMap: "/bdMap",
-					leaflet:"/leafletMap"
+					leaflet:"/leafletMap",
+					maptalks:'/maptalks'
 				}
 			}
 		},

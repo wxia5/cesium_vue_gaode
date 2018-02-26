@@ -36,8 +36,8 @@ export default {
 </script>
 
 <style type="text/css">
-	#container{
-		width: 100%;
-		height: 1000px;
-	}
+  body,html,#container{
+        height: 100%;
+        margin: 0px;
+      }
 </style>

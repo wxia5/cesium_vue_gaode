@@ -30,12 +30,10 @@
 </script>
 
 <style>
-	body {
-		margin: 0;
-	}
 	
 	.el-header {
 		padding: 0;
+		height: 30%!important;
 	}
 	
 	.el-main {
@@ -43,6 +41,6 @@
 	}
 	
 	#main {
-		height: 1000px;
+		height: 70%;
 	}
 </style>
