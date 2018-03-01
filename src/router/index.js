@@ -67,7 +67,7 @@ const routes = [
 //}
 //]
 const router = new Router({
-	mode: 'history',
+//	mode: 'history',
 	parseQuery(query) {
 		console.log(query)
 	},

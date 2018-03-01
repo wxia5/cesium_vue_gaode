@@ -38,13 +38,13 @@ export default {
     mounted(){
 
     	var map = initMap()
-//  	var height = $("#content").height()
-//  		$("#olmap").height(height)
-////  	initDraw(map)
-//  		window.onresize = function(){
-//	    		var height = $("#content").height()
-//  			$("#olmap").height(height)
-//  		}
+    	var height = $("#content").height()
+    		$("#olmap").height(height)
+//  	initDraw(map)
+    		window.onresize = function(){
+	    		var height = $("#content").height()
+    			$("#olmap").height(height)
+    		}
 
         	 var popup = new Overlay({
         element: document.getElementById('qqq')

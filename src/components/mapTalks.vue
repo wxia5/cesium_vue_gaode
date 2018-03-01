@@ -1,5 +1,5 @@
 <template>
-<div id="">
+<div id="" style="overflow: visible;">
 	  <div id="maptalks" class="container"></div>
 </div>
 </template>
@@ -7,13 +7,13 @@
 <script>
 	import * as maptalks from 'maptalks';
 //plugin's classes should be imported directly like
-console.log(maptalks)
 export default {
 	data(){
 		return{
 		}
 	},
     mounted(){
+
 	      var map = new maptalks.Map('maptalks', {
         center: [-0.113049,51.498568],
         zoom: 14,
@@ -23,7 +23,7 @@ export default {
           attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
         })
       });
-          	    	var height = $("#content").height()
+    		var height = $("#content").height()
     		$("#maptalks").height(height)
     }
 }
