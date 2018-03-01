@@ -13,10 +13,30 @@ import initDraw from './drawUtil'
 //	})
 //});
 
-
+//function initMap() {
+//				var map = new ol.Map({
+//				layers: [
+//					new ol.layer.Tile({
+//						source: new ol.source.OSM()
+//					})
+//				],
+//				target: 'olmap',
+//				controls: ol.control.defaults({
+//					attributionOptions: {
+//						collapsible: false
+//					}
+//				}),
+//				view: new ol.View({
+//					center: [0, 0],
+//					zoom: 2
+//				})
+//			});
+//			return map
+//}
 
 function initMap() {
 	      var map = new Map({
+//	      	pixelRatio:1,
         layers: [new TileLayer({
             source: new OSM()
           })],

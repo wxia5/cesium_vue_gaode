@@ -1,7 +1,5 @@
 <template>
-<div id="" style="overflow: visible;">
-	  <div id="maptalks" class="container"></div>
-</div>
+	  <div id="maptalks"></div>
 </template>
 
 <script>
@@ -23,13 +21,16 @@ export default {
           attribution: '&copy; <a href="http://osm.org">OpenStreetMap</a> contributors, &copy; <a href="https://carto.com/">CARTO</a>'
         })
       });
-    		var height = $("#content").height()
-    		$("#maptalks").height(height)
+//  		var height = $("#content").height()
+//  		$("#maptalks").height(height)
     }
 }
 </script>
 
 <style type="text/css" slot>
  html,body{margin:0px;height:100%;width:100%}
-    .container{width:100%;height:100%}
+    #maptalks{
+    	width:100%;
+    	height:100%;
+    	}
 </style>
