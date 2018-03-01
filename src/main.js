@@ -7,7 +7,22 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 Vue.use(ElementUI)
+const moduleA = {
+  state: {
+  	qqq:"a"
+  }
+}
+
+const moduleB = {
+  state: {
+  	count:'b'
+  }
+}
 const store = new Vuex.Store({
+	modules:{
+		a:moduleA,
+		b:moduleB
+	},
   state: {
     count: 0,
     collection:[1,2,3,4,5,6,7,8,9,10]

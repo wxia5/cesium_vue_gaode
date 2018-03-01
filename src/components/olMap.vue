@@ -36,7 +36,6 @@ export default {
 		}
 	},
     mounted(){
-
     	var map = initMap()
     	var height = $("#content").height()
     		$("#olmap").height(height)
