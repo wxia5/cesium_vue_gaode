@@ -31,5 +31,10 @@
 </script>
 
 <style type="text/css">
-
+.tab-header{
+	width: auto!important;
+}
+.tab-panel{
+	width: auto!important;
+}
 </style>

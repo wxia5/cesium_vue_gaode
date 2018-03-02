@@ -1,7 +1,7 @@
 <template>
 	<el-row class="tac">
 		<el-col :span="24">
-			<el-menu default-active="2" class="el-menu-vertical-demo" @open="handleOpen" router @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
+			<el-menu default-active="2" id="menu" class="el-menu-vertical-demo" @open="handleOpen" router @close="handleClose" background-color="#545c64" text-color="#fff" active-text-color="#ffd04b">
 				<el-submenu index="1">
 					<template slot="title">
 						<i class="el-icon-location"></i>
@@ -24,6 +24,10 @@
 						<el-menu-item :index="path.leaflet">
 							<img class="map-icon" src="../../static/img/mapIcon/leaflet.jpg"/>
 							<span slot="title">leaflet</span>
+						</el-menu-item>
+						<el-menu-item :index="path.maptalks">
+							<img class="map-icon" src="../../static/img/mapIcon/leaflet.jpg"/>
+							<span slot="title">maptalks</span>
 						</el-menu-item>
 					</el-menu-item-group>
 					<el-menu-item-group title="三维地图">
@@ -53,7 +57,8 @@
 					_3d: "/map3d",
 					ol_map: '/olMap',
 					bdMap: "/bdMap",
-					leaflet:"/leafletMap"
+					leaflet:"/leafletMap",
+					maptalks:'/maptalks'
 				}
 			}
 		},
@@ -77,5 +82,8 @@
 .map-icon{
 	width: 18;
 	height: 18px;
+}
+#menu{
+	width: 250px;
 }
 </style>

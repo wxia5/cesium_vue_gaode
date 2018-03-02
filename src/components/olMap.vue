@@ -1,10 +1,10 @@
 <template>
 <div id="">
-	  <div id="map" class="mymap">
-	  <treeComponent v-if="visible" id="test"></treeComponent>
-	  <button @click="toggleTable">click</button>
-	  </div>
-	  <popup id='qqq'></popup>
+		  <div id="olmap">
+		  <treeComponent v-if="visible" id="test"></treeComponent>
+			</div>
+			
+  <popup id="qqq"></popup>
 </div>
 </template>
 
@@ -26,6 +26,7 @@ export default {
 			age:27,
 			visible:false,
 			map:null,
+			mapHeight: '600px',
 		}
 	},
 	methods:{
@@ -35,9 +36,8 @@ export default {
 		}
 	},
     mounted(){
+    	
     	var map = initMap()
-//  	initDraw(map)
-
         	 var popup = new Overlay({
         element: document.getElementById('qqq'),
         offset:[-91,-250]
@@ -75,8 +75,12 @@ export default {
 </script>
 
 <style type="text/css" slot>
-	#map{
+#www{
+	height: 100%;
+	width: 100%;
+}
+	#olmap{
+		/*height: 100%;*/
  width: 100%;
-        height: 100%;
 	}
 </style>

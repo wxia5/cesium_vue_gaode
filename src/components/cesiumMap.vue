@@ -1,7 +1,6 @@
 <template>
 	<div id="">
 		<div id="cesiumContainer">
-			<!--<timeSlider></timeSlider>-->
 		</div>
 	</div>
 </template>
@@ -17,12 +16,19 @@
 		},
 		mounted() {
 			var viewer = new Cesium.Viewer("cesiumContainer");
-
+			var height = $("#content").height()
+			$("#cesiumContainer").height(height)
+    		window.onresize = function(){
+	    		var height = $("#content").height()
+    			$("#cesiumContainer").height(height)
+    		}
 			viewer.camera.flyTo({
 				destination: Cesium.Cartesian3.fromDegrees(-117.16, 32.71, 15000.0)
 			});
-			console.log(this)
-			this.$mySlider()
+			 var canvas = document.getElementById("theCanvas");
+ 			 canvas.width = $("#parent").width();
+  			canvas.height = $("#parent").height();
+//			this.$mySlider()
 //				var newDiv = document.createElement("div");
 //				var newContent = document.createTextNode("Hi there and greetings!");
 //				newDiv.appendChild(newContent)
@@ -35,11 +41,6 @@
 <style>
 	#cesiumContainer {
 		width: 100%;
-		height: 700px;
 	}
 	
-	#slider {
-		position: relative;
-		bottom: 0px;
-	}
 </style>

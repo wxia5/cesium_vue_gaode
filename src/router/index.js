@@ -8,6 +8,7 @@ import gaodeMap from '../components/gaodeMap'
 import olMap from '../components/olMap'
 import bdMap from '../components/baiduMap'
 import leafletMap from '../components/leafletMap'
+import maptalks from '../components/maptalks'
 import cesiumMap from '../components/cesiumMap'
 import NProgress from 'nprogress'
 import 'nprogress/nprogress.css'
@@ -48,6 +49,11 @@ const routes = [
 				path: "/leafletMap",
 				component: leafletMap,
 				name: "leafletMap"
+			},
+			{
+				path: "/maptalks",
+				component: maptalks,
+				name: "maptalks"
 			}
 		]
 	},
@@ -61,7 +67,7 @@ const routes = [
 //}
 //]
 const router = new Router({
-	mode: 'history',
+//	mode: 'history',
 	parseQuery(query) {
 		console.log(query)
 	},
