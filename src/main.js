@@ -24,8 +24,7 @@ const store = new Vuex.Store({
 		b:moduleB
 	},
   state: {
-    count: 0,
-    collection:[1,2,3,4,5,6,7,8,9,10]
+    isOpen:false
   },
   getters:{
   	getNumber1:function(state){
@@ -47,13 +46,12 @@ const store = new Vuex.Store({
   	
   },
   mutations: {
-    increment (state) {
-      state.count++
+    toggleIsOpen (state) {
+      state.isOpen = !state.isOpen
     }
   }
 })
 
-store.commit('increment')
 
 new Vue({
   el: '#app',

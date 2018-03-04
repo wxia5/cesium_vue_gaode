@@ -3,7 +3,7 @@
 		<div title="图形显示">
 			<div class="ribbon-group">
 				<div class="ribbon-toolbar">
-					<a href="#" class="easyui-menubutton" data-options="name:'paste',iconCls:'icon-paste-large',iconAlign:'top',size:'large'">打开</a>
+					<a href="#" class="easyui-menubutton" data-options="name:'paste',iconCls:'icon-paste-large',iconAlign:'top',size:'large'" v-on:click="initOpen">打开</a>
 				</div>
 				<div class="ribbon-toolbar">
 					<a href="#" class="easyui-menubutton" data-options="name:'paste',iconCls:'icon-paste-large',iconAlign:'top',size:'large'">保存</a>
@@ -83,6 +83,12 @@
 			return {
 				
 			}
-		}
+		},
+		methods:{
+			initOpen(){
+				this.$store.commit("toggleIsOpen")
+			}
+		},
+		
 	}
 </script>

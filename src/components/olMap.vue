@@ -1,10 +1,8 @@
 <template>
-<div id="">
-		  <div id="olmap">
-		  <treeComponent v-if="visible" id="test"></treeComponent>
+<div id="" style="width: 100%;height: 100%;">
+			  <div id="olmap">
 			</div>
-			
-  <popup id="qqq"></popup>
+			<windowComponent v-show='getIsOpen'></windowComponent>
 </div>
 </template>
 
@@ -15,10 +13,12 @@
   import {mapState,mapActions} from 'vuex'  
   import Overlay from 'ol/overlay';
 	import qqq from '../js/olUtil'
+	import windowComponent from './UI/windowComponent'
 export default {
 	components:{
 		treeComponent:treeComponent,
-		popup:popup
+		popup:popup,
+		windowComponent:windowComponent,
 	},
 	data(){
 		return{
@@ -26,14 +26,9 @@ export default {
 			age:27,
 			visible:false,
 			map:null,
-			mapHeight: '600px',
 		}
 	},
 	methods:{
-		toggleTable(){
-			console.log(111)
-			this.visible  =!this.visible
-		}
 	},
     mounted(){
     	
@@ -66,8 +61,8 @@ export default {
     	xwq2:function(state){
     		return state.count
     	},
-    	getCount(state){
-    		return state.count
+    	getIsOpen(state){
+    		return state.isOpen
     	}
     })
     }
@@ -80,7 +75,7 @@ export default {
 	width: 100%;
 }
 	#olmap{
-		/*height: 100%;*/
+		height: 100%;
  width: 100%;
 	}
 </style>
