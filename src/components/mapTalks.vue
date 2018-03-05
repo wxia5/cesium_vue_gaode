@@ -3,7 +3,7 @@
 </template>
 
 <script>
-//	import * as maptalks from 'maptalks';
+	import * as maptalks from 'maptalks';
 //plugin's classes should be imported directly like
 export default {
 	data(){
