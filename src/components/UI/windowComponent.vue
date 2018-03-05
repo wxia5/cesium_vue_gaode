@@ -49,7 +49,7 @@
 
 			},
 			closeWindow() {
-				this.$store.commit("toggleIsOpen")
+				this.$store.commit("toggleJBHZ")
 			}
 		},
 

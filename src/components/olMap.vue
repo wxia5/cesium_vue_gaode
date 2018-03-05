@@ -2,7 +2,10 @@
 <div id="" style="width: 100%;height: 100%;">
 			  <div id="olmap">
 			</div>
-			<windowComponent v-show='getIsOpen'></windowComponent>
+			<windowComponent  v-show="JBHZIsOpen"></windowComponent>
+			<openFileComponent></openFileComponent>
+			<bzsxComponent v-show="BZSXIsOpen"></bzsxComponent>
+			<bzmbtckzComponent v-show="BZMB_TCKZIsOpen"></bzmbtckzComponent>
 </div>
 </template>
 
@@ -14,18 +17,20 @@
   import Overlay from 'ol/overlay';
 	import qqq from '../js/olUtil'
 	import windowComponent from './UI/windowComponent'
+	import openFileComponent from './UI/modal/openFile'
+	import bzsxComponent from './UI/windowComponent/bzsxComponent'
+	import bzmbtckzComponent from './UI/windowComponent/bzmb_tckz'
 export default {
 	components:{
 		treeComponent:treeComponent,
 		popup:popup,
 		windowComponent:windowComponent,
+		openFileComponent:openFileComponent,
+		bzsxComponent:bzsxComponent,
+		bzmbtckzComponent:bzmbtckzComponent
 	},
 	data(){
 		return{
-			name:"xwq",
-			age:27,
-			visible:false,
-			map:null,
 		}
 	},
 	methods:{
@@ -61,9 +66,19 @@ export default {
     	xwq2:function(state){
     		return state.count
     	},
-    	getIsOpen(state){
-    		return state.isOpen
-    	}
+    	newFileIsOpen(state){
+    		debugger
+    		return state.newFileIsOpen
+    	},
+    	JBHZIsOpen(state){
+    		return state.JBHZIsOpen
+    	},
+    	BZSXIsOpen(state){
+    		return state.BZSXIsOpen
+    	},
+    	    	BZMB_TCKZIsOpen(state){
+    		return state.BZMB_TCKZIsOpen
+    	},
     })
     }
 }
