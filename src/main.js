@@ -4,6 +4,9 @@ import router from "./router"
 import 'element-ui/lib/theme-chalk/index.css'
 import App from './App.vue'
 import Vuex from 'vuex'
+import vueDrag from 'vue-dragging'
+
+Vue.use(vueDrag)
 
 Vue.use(Vuex)
 Vue.use(ElementUI)

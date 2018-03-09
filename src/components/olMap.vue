@@ -3,9 +3,13 @@
 			  <div id="olmap">
 			</div>
 			<windowComponent  v-show="JBHZIsOpen"></windowComponent>
-			<openFileComponent></openFileComponent>
+			<openFileComponent ></openFileComponent>
 			<bzsxComponent v-show="BZSXIsOpen"></bzsxComponent>
-			<bzmbtckzComponent v-show="BZMB_TCKZIsOpen"></bzmbtckzComponent>
+			<!--<bzmbtckzComponent v-show="BZMB_TCKZIsOpen"></bzmbtckzComponent>-->
+<vue-draggable-resizable style="height: 500px;" :resizable="false" :parent="true">
+				<bzmbtckzComponent v-show="BZMB_TCKZIsOpen"></bzmbtckzComponent>
+</vue-draggable-resizable>
+			
 </div>
 </template>
 
@@ -20,6 +24,9 @@
 	import openFileComponent from './UI/modal/openFile'
 	import bzsxComponent from './UI/windowComponent/bzsxComponent'
 	import bzmbtckzComponent from './UI/windowComponent/bzmb_tckz'
+	import VueDraggableResizable from 'vue-draggable-resizable'
+
+	
 export default {
 	components:{
 		treeComponent:treeComponent,
@@ -27,7 +34,8 @@ export default {
 		windowComponent:windowComponent,
 		openFileComponent:openFileComponent,
 		bzsxComponent:bzsxComponent,
-		bzmbtckzComponent:bzmbtckzComponent
+		bzmbtckzComponent:bzmbtckzComponent,
+		'vue-draggable-resizable':VueDraggableResizable
 	},
 	data(){
 		return{
@@ -36,7 +44,7 @@ export default {
 	methods:{
 	},
     mounted(){
-    	
+    	debugger
     	var map = initMap()
         	 var popup = new Overlay({
         element: document.getElementById('qqq'),
@@ -67,7 +75,7 @@ export default {
     		return state.count
     	},
     	newFileIsOpen(state){
-    		debugger
+			debugger
     		return state.newFileIsOpen
     	},
     	JBHZIsOpen(state){
@@ -85,10 +93,6 @@ export default {
 </script>
 
 <style type="text/css" slot>
-#www{
-	height: 100%;
-	width: 100%;
-}
 	#olmap{
 		height: 100%;
  width: 100%;

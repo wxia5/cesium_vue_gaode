@@ -1,6 +1,6 @@
 <template>
-	<el-card class="box-card" style='position: absolute;left: 50px;top: 20px;height: 80%;overflow-y: scroll;overflow-x: hidden;'>
-		<div slot="header" class="clearfix" style="padding: 10px;">
+	<el-card class="box-card" style='position: absolute;left: 50px;top: 20px;height: 80%;overflow-y: scroll;overflow-x: hidden;' >
+		<div  slot="header"  class="clearfix" style="padding: 10px;">
 			<span>标注属性</span>
 			<i id="icon-close" class="el-icon-close" v-on:click="closeWindow" style="float: right; padding: 3px 0;cursor: pointer;"></i>
 			<i id="icon-mini" class="el-icon-bottom" v-bind:class="{ 'el-icon-caret-top':isTop,'el-icon-caret-bottom':isDown}" v-on:click="togglePanel" style="float: right; padding: 3px 0;cursor: pointer;"></i>
@@ -139,6 +139,9 @@
 				this.$store.commit("toggleBZSX")
 			}
 		},
+		mounted(){
+    	
+		}
 
 	}
 </script>
